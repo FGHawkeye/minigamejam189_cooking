@@ -1,0 +1,83 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv1flc1otdj8f"]
+
+[ext_resource type="Script" uid="uid://cc86yvq6xleb5" path="res://scripts/generadorIngredientes.gd" id="1_o5qli"]
+
+[node name="main" type="Node2D"]
+
+[node name="generadorIngredientes" type="Node" parent="."]
+script = ExtResource("1_o5qli")
+
+[node name="Marker2D" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(92, 242)
+
+[node name="Marker2D2" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(146, 244)
+
+[node name="Marker2D3" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(209, 241)
+
+[node name="Marker2D4" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(264, 238)
+
+[node name="Marker2D5" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(338, 238)
+
+[node name="Marker2D6" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(92, 323)
+
+[node name="Marker2D7" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(150, 326)
+
+[node name="Marker2D8" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(212, 322)
+
+[node name="Marker2D9" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(272, 317)
+
+[node name="Marker2D10" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(345, 314)
+
+[node name="Marker2D11" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(87, 387)
+
+[node name="Marker2D12" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(157, 393)
+
+[node name="Marker2D13" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(221, 398)
+
+[node name="Marker2D14" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(277, 385)
+
+[node name="Marker2D15" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(355, 395)
+
+[node name="Marker2D16" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(83, 475)
+
+[node name="Marker2D17" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(154, 469)
+
+[node name="Marker2D18" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(226, 463)
+
+[node name="Marker2D19" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(287, 465)
+
+[node name="Marker2D20" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(370, 462)
+
+[node name="Marker2D21" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(76, 555)
+
+[node name="Marker2D22" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(162, 543)
+
+[node name="Marker2D23" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(230, 536)
+
+[node name="Marker2D24" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(295, 538)
+
+[node name="Marker2D25" type="Marker2D" parent="generadorIngredientes"]
+position = Vector2(375, 548)
