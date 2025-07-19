@@ -6,5 +6,4 @@ func _ready():
 	timer.wait_time = pb.value
 
 func _process(delta):
-	print(timer.time_left)
 	pb.value = timer.time_left

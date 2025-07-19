@@ -16,7 +16,6 @@ font_size = 80
 font_color = Color(0, 0, 0, 1)
 
 [node name="main" type="Node2D"]
-script = ExtResource("1_0wfyh")
 
 [node name="timerManager" type="Node2D" parent="."]
 script = ExtResource("2_tipki")
@@ -34,16 +33,6 @@ max_value = 5.0
 value = 5.0
 fill_mode = 3
 texture_progress = ExtResource("7_o6xl0")
-
-[node name="Label" type="Label" parent="."]
-z_index = 5
-offset_left = 277.0
-offset_top = 108.0
-offset_right = 421.0
-offset_bottom = 185.0
-label_settings = SubResource("LabelSettings_jyhfs")
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="generadorIngredientes" type="Node" parent="."]
 script = ExtResource("1_o5qli")
@@ -127,10 +116,14 @@ position = Vector2(462, 498)
 script = ExtResource("1_0wfyh")
 
 [node name="Label" type="Label" parent="scoreIngredientes"]
-offset_left = 462.0
-offset_top = 498.0
-offset_right = 714.0
-offset_bottom = 542.0
+z_index = 5
+offset_left = 277.0
+offset_top = 108.0
+offset_right = 421.0
+offset_bottom = 194.0
+label_settings = SubResource("LabelSettings_jyhfs")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Sprites" type="Node" parent="."]
 
