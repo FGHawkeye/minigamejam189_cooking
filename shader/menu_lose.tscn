@@ -1,10 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://df00nymfkli2k"]
-
-[ext_resource type="Shader" uid="uid://cv4g535x0ccwm" path="res://blur.gdshader" id="1_hpugl"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0vvuo"]
-shader = ExtResource("1_hpugl")
-shader_parameter/lod = 0.0
+[gd_scene load_steps=3 format=3 uid="uid://df00nymfkli2k"]
 
 [sub_resource type="Animation" id="Animation_8th2x"]
 resource_name = "blur"
@@ -22,12 +16,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_0vvuo")
-offset_right = 953.0
-offset_bottom = 596.0
-color = Color(0.00372601, 0.00397472, 0.00408382, 0.94902)
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1

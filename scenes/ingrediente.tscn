@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bgeiuljqf4ubf"]
+[gd_scene load_steps=6 format=3 uid="uid://bgeiuljqf4ubf"]
 
 [ext_resource type="Script" uid="uid://b1kfunqjdqqqe" path="res://scripts/clickIngrediente.gd" id="2_dwhbi"]
 [ext_resource type="Texture2D" uid="uid://c31m8nqsg0uf1" path="res://sprites/ingrediente_mock.png" id="2_hsx5i"]
-[ext_resource type="Script" path="res://scripts/numIngredientes.gd" id="2_jennl"]
 [ext_resource type="FontFile" uid="uid://dnmt4kb3ljgo3" path="res://fonts/Sawer.otf" id="3_jennl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_u2cdj"]
