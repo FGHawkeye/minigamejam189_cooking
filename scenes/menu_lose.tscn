@@ -40,13 +40,15 @@ rotation = 0.000403179
 layout_mode = 2
 
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+process_mode = 3
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_dvcyu")
 theme_override_font_sizes/font_size = 45
 text = "Ops, you lose!"
 horizontal_alignment = 1
 
-[node name="ScoreFinal" type="Label" parent="PanelContainer/VBoxContainer"]
+[node name="score" type="Label" parent="PanelContainer/VBoxContainer"]
+process_mode = 3
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_dvcyu")
 theme_override_font_sizes/font_size = 45
@@ -67,5 +69,5 @@ theme_override_font_sizes/font_size = 35
 text = "back to menu"
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/back" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/back" to="." method="_on_back_pressed"]

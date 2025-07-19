@@ -1,10 +1,8 @@
 extends Control
 
-#@export var scoreManagerNode : Node
-
-func mostraScoreFinal(score):
-	$ScoreFinal.text = "Score Total: " + str(score)
-#$ScoreFinal.text = "Score Total: " + str(scoreTotal)
+func mostrarScoreFinal():
+	var scoreManager = get_node("/root/main/scoreIngredientes")
+	$PanelContainer/VBoxContainer/score.text = "Score: " + str(scoreManager.scoreFinal)
 
 func _on_restart_pressed() -> void:
 	get_tree().paused = false

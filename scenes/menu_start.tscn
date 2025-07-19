@@ -55,5 +55,5 @@ theme_override_font_sizes/font_size = 35
 text = "Settings / How to play"
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/How Play" to="." method="_on_how_play_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/How Play" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/How Play" to="." method="_on_how_play_pressed"]
