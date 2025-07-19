@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bgeiuljqf4ubf"]
+[gd_scene load_steps=5 format=3 uid="uid://bgeiuljqf4ubf"]
 
 [ext_resource type="Script" uid="uid://b1kfunqjdqqqe" path="res://scripts/clickIngrediente.gd" id="2_dwhbi"]
 [ext_resource type="Texture2D" uid="uid://8mqowtlomqef" path="res://sprites/ingrediente_mock.png" id="2_hsx5i"]
-[ext_resource type="Script" uid="uid://cmcacupptqeik" path="res://scripts/numIngredientes.gd" id="2_jennl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_u2cdj"]
 font_size = 30
@@ -13,9 +12,11 @@ size = Vector2(66, 65)
 
 [node name="Ingrediente" type="Sprite2D"]
 texture = ExtResource("2_hsx5i")
-script = ExtResource("2_jennl")
 
-[node name="LabelIngr" type="Label" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_dwhbi")
+
+[node name="LabelIngr" type="Label" parent="Area2D"]
 offset_left = -27.0
 offset_top = -22.0
 offset_right = 27.0
@@ -23,9 +24,6 @@ offset_bottom = 21.0
 label_settings = SubResource("LabelSettings_u2cdj")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("2_dwhbi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -0.5)
