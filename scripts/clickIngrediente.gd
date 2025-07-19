@@ -10,7 +10,14 @@ func _input_event(viewport, event, shape_idx):
 		print("click")
 		print("Valor del ingrediente:", numIngr)
 		get_node("/root/main/scoreIngredientes").sumarPuntaje(int(numIngr))
-		queue_free()
+		_mouse_exit()
+		get_parent().queue_free()
 
 func setFrameFood(dictionary: Dictionary):
 	get_parent().set_frame(dictionary[str(numIngr)])
+
+func _mouse_enter():
+	get_parent().scale = Vector2(1.3, 1.3)
+
+func _mouse_exit():
+	get_parent().scale = Vector2(1.1, 1.1)
