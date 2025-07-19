@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://df00nymfkli2k"]
+[gd_scene load_steps=0 format=3 uid="uid://df00nymfkli2k"]
 
 [node name="menuLose" type="Control"]
 layout_mode = 3
