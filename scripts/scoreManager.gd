@@ -10,5 +10,7 @@ func sumarPuntaje(valor):
 	if scoreTotal == scoreWin:
 		print("Win")
 	if scoreTotal > scoreWin:
-		print("Lose")
+		get_tree().paused = true
+		get_node("/root/main/menuLose").visible = true
+		
 	
