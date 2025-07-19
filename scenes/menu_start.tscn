@@ -37,6 +37,7 @@ theme_override_fonts/font = ExtResource("1_ccu5i")
 theme_override_font_sizes/font_size = 45
 text = "Welcome"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Start" type="Button" parent="PanelContainer/VBoxContainer"]
 process_mode = 3
@@ -44,21 +45,15 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_ccu5i")
 theme_override_font_sizes/font_size = 35
 text = "Start"
+icon_alignment = 1
 
-[node name="Settings" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="How Play" type="Button" parent="PanelContainer/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_ccu5i")
 theme_override_font_sizes/font_size = 35
 text = "Settings / How to play"
 
-[node name="Exit" type="Button" parent="PanelContainer/VBoxContainer"]
-process_mode = 3
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_ccu5i")
-theme_override_font_sizes/font_size = 35
-text = "exit"
-
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/How Play" to="." method="_on_how_play_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/How Play" to="." method="_on_settings_pressed"]
