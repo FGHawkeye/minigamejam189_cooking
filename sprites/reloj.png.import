@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c31m8nqsg0uf1"
-path="res://.godot/imported/ingrediente_mock.png-a0c9f0ebd0505fa71a7de82ee1ebb16a.ctex"
+uid="uid://wqtqkomss67b"
+path="res://.godot/imported/reloj.png-b7d59bb589a7efa919bf54cf2da2d4b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ingrediente_mock.png"
-dest_files=["res://.godot/imported/ingrediente_mock.png-a0c9f0ebd0505fa71a7de82ee1ebb16a.ctex"]
+source_file="res://sprites/reloj.png"
+dest_files=["res://.godot/imported/reloj.png-b7d59bb589a7efa919bf54cf2da2d4b2.ctex"]
 
 [params]
 
