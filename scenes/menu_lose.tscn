@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://df00nymfkli2k"]
+[gd_scene load_steps=9 format=3 uid="uid://df00nymfkli2k"]
 
 [ext_resource type="FontFile" uid="uid://dnmt4kb3ljgo3" path="res://fonts/Sawer.otf" id="1_dvcyu"]
 [ext_resource type="Script" uid="uid://bodss37727jlf" path="res://scripts/menuLose.gd" id="1_ptxcj"]
@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://v8o80wctm4x1" path="res://sprites/salchicha.png" id="4_p7brk"]
 [ext_resource type="AudioStream" uid="uid://ce1gvbip3gb5p" path="res://sounds/clickMenu.wav" id="5_ulume"]
 [ext_resource type="AudioStream" uid="uid://b8s5q0yi71dcr" path="res://sounds/bottoms.wav" id="6_214tn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ulume"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_214tn"]
 
 [node name="menuLose" type="Control"]
 layout_mode = 3
@@ -52,7 +56,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_dvcyu")
 theme_override_font_sizes/font_size = 45
-text = "Ops, you lose!"
+text = "Ops, you are fired!"
 horizontal_alignment = 1
 
 [node name="score" type="Label" parent="PanelContainer/VBoxContainer"]
@@ -71,6 +75,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_dvcyu")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ulume")
 text = "Restart"
 flat = true
 
@@ -81,6 +86,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_dvcyu")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_214tn")
 text = "back to menu"
 flat = true
 

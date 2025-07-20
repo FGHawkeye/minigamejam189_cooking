@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccf5paujcuo1m"]
+[gd_scene load_steps=9 format=3 uid="uid://ccf5paujcuo1m"]
 
 [ext_resource type="FontFile" uid="uid://dnmt4kb3ljgo3" path="res://fonts/Sawer.otf" id="1_ccu5i"]
 [ext_resource type="Script" uid="uid://c6i8qux5cnao" path="res://scripts/menuStart.gd" id="1_ncqf3"]
@@ -6,6 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://b8s5q0yi71dcr" path="res://sounds/bottoms.wav" id="4_4jmj5"]
 [ext_resource type="Texture2D" uid="uid://v8o80wctm4x1" path="res://sprites/salchicha.png" id="5_okbob"]
 [ext_resource type="Texture2D" uid="uid://8nso3wcpiawi" path="res://sprites/menu.png" id="6_egsp4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_okbob"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_egsp4"]
 
 [node name="menuStart" type="Node2D"]
 script = ExtResource("1_ncqf3")
@@ -25,6 +29,7 @@ offset_bottom = 440.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_ccu5i")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_okbob")
 text = "How to play"
 flat = true
 
@@ -39,6 +44,7 @@ offset_bottom = 377.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_ccu5i")
 theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_egsp4")
 text = "Start"
 flat = true
 icon_alignment = 1
