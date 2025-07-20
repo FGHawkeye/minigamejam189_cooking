@@ -1,13 +1,19 @@
 extends Node
+#SCORE MANAGER SE RESPONSABILIZA DE LA CONDICION DE VICTORIA POR PUNTOS Y PERDIDA POR PUNTOS
+#ADEMAS DE REINICIAR LA RONDA ENTERA AL GANAR
+
+@onready var timerManagerNode = get_node("/root/main/timerManager")
+@onready var menuLoseNode = get_node("/root/main/menuLose")
+@onready var generadorIngredientesNode = get_node("/root/main/generadorIngredientes")
 
 var scoreWin =0
 var scoreTotal =0
 var scoreFinal=0
 
 func _ready():
-	iniciar_nueva_ronda()
+	obtenerScoreParaGanar()
 	
-func iniciar_nueva_ronda ():  #Puntaje necesario
+func obtenerScoreParaGanar ():
 	scoreWin = int(randf_range(7, 15))
 	$Label.text =  str(scoreWin)
 
@@ -17,16 +23,16 @@ func sumarPuntaje(valor):
 	if scoreTotal == scoreWin:
 		scoreFinal += 1
 		scoreTotal = 0
-		iniciar_nueva_ronda()
+		iniciarNuevaRonda()
 		print(scoreFinal)
 		print("Win")
 	elif scoreTotal > scoreWin:
 		print("Lose")
 		print(scoreFinal)
 		get_tree().paused = true
-		get_node("/root/main/menuLose").visible = true
-		get_node("/root/main/menuLose").mostrarScoreFinal()
+		menuLoseNode.visible = true
+		menuLoseNode.mostrarScoreFinal()
 
-#func _on_some_event():
- #   var hud = get_node("/root/main/menuLose") # Cambia esta ruta según tu escena
-  #  hud.mostrarScoreFinal(scoreFinal)  # Llamás la función con el valor que quieras mostrar
+func iniciarNuevaRonda():
+	timerManagerNode.get_child(0).start()
+	

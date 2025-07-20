@@ -23,6 +23,7 @@ script = ExtResource("2_tipki")
 
 [node name="Timer" type="Timer" parent="timerManager"]
 wait_time = 5.0
+one_shot = true
 autostart = true
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="timerManager"]
@@ -30,8 +31,8 @@ offset_left = 59.0
 offset_top = 77.0
 offset_right = 103.0
 offset_bottom = 391.0
-max_value = 5.0
-value = 5.0
+max_value = 50.0
+value = 50.0
 fill_mode = 3
 texture_progress = ExtResource("7_o6xl0")
 
@@ -113,10 +114,10 @@ position = Vector2(402, 498)
 [node name="Marker2D25" type="Marker2D" parent="generadorIngredientes"]
 position = Vector2(462, 498)
 
-[node name="scoreIngredientes" type="Node" parent="."]
+[node name="scoreManager" type="Node" parent="."]
 script = ExtResource("1_0wfyh")
 
-[node name="Label" type="Label" parent="scoreIngredientes"]
+[node name="Label" type="Label" parent="scoreManager"]
 z_index = 5
 offset_left = 277.0
 offset_top = 108.0

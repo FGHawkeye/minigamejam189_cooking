@@ -1,7 +1,7 @@
 extends Control
 
 func mostrarScoreFinal():
-	var scoreManager = get_node("/root/main/scoreIngredientes")
+	var scoreManager = get_node("/root/main/scoreManager")
 	$PanelContainer/VBoxContainer/score.text = "Score: " + str(scoreManager.scoreFinal)
 
 func _on_restart_pressed() -> void:

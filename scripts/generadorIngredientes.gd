@@ -22,3 +22,17 @@ func getAllNodes(node):
 			getAllNodes(N)
 		else:
 			spawnPoints.append(N)
+
+func resetAllFood():
+	changeDictionary()
+	#removeFood()
+	spawnFood()
+	
+func changeDictionary():
+	var listOfFrameNumbers = [0, 1 , 2, 3 ,4 ,5 ,6, 7, 8]
+	for index in foodSpriteDictionary:
+		var randomNumber = listOfFrameNumbers.pick_random()
+		foodSpriteDictionary[index] = randomNumber
+		listOfFrameNumbers.erase(randomNumber)
+
+	

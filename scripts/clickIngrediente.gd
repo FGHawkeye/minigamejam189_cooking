@@ -9,7 +9,7 @@ func _input_event(viewport, event, shape_idx):
 	if event.is_action_pressed("click"):
 		print("click")
 		print("Valor del ingrediente:", numIngr)
-		get_node("/root/main/scoreIngredientes").sumarPuntaje(int(numIngr))
+		get_node("/root/main/scoreManager").sumarPuntaje(int(numIngr))
 		_mouse_exit()
 		get_parent().queue_free()
 
