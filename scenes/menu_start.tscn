@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ccf5paujcuo1m"]
+[gd_scene load_steps=10 format=3 uid="uid://ccf5paujcuo1m"]
 
 [ext_resource type="FontFile" uid="uid://dnmt4kb3ljgo3" path="res://fonts/Sawer.otf" id="1_ccu5i"]
 [ext_resource type="Script" uid="uid://c6i8qux5cnao" path="res://scripts/menuStart.gd" id="1_ncqf3"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://b8s5q0yi71dcr" path="res://sounds/bottoms.wav" id="4_4jmj5"]
 [ext_resource type="Texture2D" uid="uid://v8o80wctm4x1" path="res://sprites/salchicha.png" id="5_okbob"]
 [ext_resource type="Texture2D" uid="uid://8nso3wcpiawi" path="res://sprites/menu.png" id="6_egsp4"]
+[ext_resource type="Texture2D" uid="uid://ktsggshjjss4" path="res://sprites/portadaB.png" id="7_egsp4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_okbob"]
 
@@ -22,10 +23,10 @@ anchors_preset = 0
 process_mode = 3
 z_index = 15
 layout_mode = 0
-offset_left = 277.0
-offset_top = 393.0
-offset_right = 757.0
-offset_bottom = 440.0
+offset_left = 238.0
+offset_top = 353.75
+offset_right = 718.0
+offset_bottom = 400.75
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_ccu5i")
 theme_override_font_sizes/font_size = 35
@@ -37,10 +38,10 @@ flat = true
 process_mode = 3
 z_index = 15
 layout_mode = 0
-offset_left = 422.0
-offset_top = 330.0
-offset_right = 622.0
-offset_bottom = 377.0
+offset_left = 383.0
+offset_top = 290.75
+offset_right = 583.0
+offset_bottom = 337.75
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_ccu5i")
 theme_override_font_sizes/font_size = 35
@@ -57,38 +58,29 @@ volume_db = -10.667
 stream = ExtResource("4_4jmj5")
 volume_db = -21.333
 
-[node name="Label" type="Label" parent="."]
-z_index = 15
-z_as_relative = false
-offset_left = 290.0
-offset_top = 199.0
-offset_right = 770.0
-offset_bottom = 248.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_ccu5i")
-theme_override_font_sizes/font_size = 45
-text = "Welcome"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="sprites" type="CanvasModulate" parent="."]
 
 [node name="Salchi" type="Sprite2D" parent="sprites"]
 z_index = 5
 z_as_relative = false
-position = Vector2(531, 353)
+position = Vector2(492, 313.75)
 texture = ExtResource("5_okbob")
 
 [node name="Salchi2" type="Sprite2D" parent="sprites"]
 z_index = 5
 z_as_relative = false
-position = Vector2(531, 418)
+position = Vector2(492, 378.75)
 texture = ExtResource("5_okbob")
 
 [node name="Menu" type="Sprite2D" parent="sprites"]
-position = Vector2(531, 386)
+position = Vector2(492, 346.75)
 scale = Vector2(0.905138, 0.823404)
 texture = ExtResource("6_egsp4")
+
+[node name="PortadaB" type="Sprite2D" parent="sprites"]
+z_index = -1
+position = Vector2(478, 297)
+texture = ExtResource("7_egsp4")
 
 [connection signal="pressed" from="buttons/How Play" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="buttons/Start" to="." method="_on_start_pressed"]

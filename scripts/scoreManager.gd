@@ -10,9 +10,6 @@ extends Node
 var scoreWin =0
 var scoreTotal =0
 var scoreFinal=0
-
-func _ready():
-	obtenerScoreParaGanar()
 	
 
 func obtenerScoreParaGanar ():

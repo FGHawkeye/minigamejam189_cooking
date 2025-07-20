@@ -5,7 +5,7 @@ extends Node2D
 
 func _process(delta):
 	pb.value = timer.time_left * 10
-	if timer.time_left == 0:
+	if timer.time_left == 0 && visible:
 		get_tree().paused = true
 		get_node("/root/main/menuLose").visible = true
 		get_node("/root/main/menuLose").mostrarScoreFinal()
