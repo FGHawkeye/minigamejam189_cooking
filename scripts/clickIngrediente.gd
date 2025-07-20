@@ -1,6 +1,7 @@
 extends Area2D
 var numIngr = 0
 
+
 func _ready():
 	numIngr = int(randf_range(1,9))
 	$LabelIngr.text = str(numIngr)

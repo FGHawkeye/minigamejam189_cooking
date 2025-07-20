@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccf5paujcuo1m"]
+[gd_scene load_steps=7 format=3 uid="uid://ccf5paujcuo1m"]
 
 [ext_resource type="FontFile" uid="uid://dnmt4kb3ljgo3" path="res://fonts/Sawer.otf" id="1_ccu5i"]
 [ext_resource type="Script" uid="uid://c6i8qux5cnao" path="res://scripts/menuStart.gd" id="1_ncqf3"]
 [ext_resource type="AudioStream" uid="uid://ce1gvbip3gb5p" path="res://sounds/clickMenu.wav" id="3_tc6ix"]
+[ext_resource type="AudioStream" uid="uid://b8s5q0yi71dcr" path="res://sounds/bottoms.wav" id="4_4jmj5"]
+[ext_resource type="Texture2D" uid="uid://v8o80wctm4x1" path="res://sprites/salchicha.png" id="5_okbob"]
+[ext_resource type="Texture2D" uid="uid://8nso3wcpiawi" path="res://sprites/menu.png" id="6_egsp4"]
 
 [node name="menuStart" type="Node2D"]
 script = ExtResource("1_ncqf3")
@@ -13,33 +16,45 @@ anchors_preset = 0
 
 [node name="How Play" type="Button" parent="buttons"]
 process_mode = 3
+z_index = 15
 offset_left = 277.0
 offset_top = 393.0
 offset_right = 757.0
 offset_bottom = 440.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_ccu5i")
 theme_override_font_sizes/font_size = 35
-text = "Settings / How to play"
+text = "How to play"
+flat = true
 
 [node name="Start" type="Button" parent="buttons"]
 process_mode = 3
-offset_left = 272.0
-offset_top = 325.0
-offset_right = 752.0
-offset_bottom = 372.0
+z_index = 15
+offset_left = 422.0
+offset_top = 330.0
+offset_right = 622.0
+offset_bottom = 377.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_ccu5i")
 theme_override_font_sizes/font_size = 35
 text = "Start"
+flat = true
 icon_alignment = 1
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="buttons/Start"]
+[node name="clickMenu" type="AudioStreamPlayer" parent="buttons"]
 stream = ExtResource("3_tc6ix")
 
+[node name="bottoms" type="AudioStreamPlayer" parent="buttons"]
+stream = ExtResource("4_4jmj5")
+
 [node name="Label" type="Label" parent="."]
-offset_left = 280.0
-offset_top = 245.0
-offset_right = 760.0
-offset_bottom = 294.0
+z_index = 15
+z_as_relative = false
+offset_left = 290.0
+offset_top = 199.0
+offset_right = 770.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_ccu5i")
 theme_override_font_sizes/font_size = 45
 text = "Welcome"
@@ -48,6 +63,22 @@ vertical_alignment = 1
 
 [node name="sprites" type="Node" parent="."]
 
+[node name="Salchi" type="Sprite2D" parent="sprites"]
+z_index = 5
+z_as_relative = false
+position = Vector2(531, 353)
+texture = ExtResource("5_okbob")
+
+[node name="Salchi2" type="Sprite2D" parent="sprites"]
+z_index = 5
+z_as_relative = false
+position = Vector2(531, 418)
+texture = ExtResource("5_okbob")
+
+[node name="Menu" type="Sprite2D" parent="sprites"]
+position = Vector2(531, 386)
+scale = Vector2(0.905138, 0.823404)
+texture = ExtResource("6_egsp4")
+
 [connection signal="pressed" from="buttons/How Play" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="buttons/How Play" to="." method="_on_how_play_pressed"]
 [connection signal="pressed" from="buttons/Start" to="." method="_on_start_pressed"]
