@@ -1,59 +1,53 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccf5paujcuo1m"]
+[gd_scene load_steps=4 format=3 uid="uid://ccf5paujcuo1m"]
 
 [ext_resource type="FontFile" uid="uid://dnmt4kb3ljgo3" path="res://fonts/Sawer.otf" id="1_ccu5i"]
 [ext_resource type="Script" uid="uid://c6i8qux5cnao" path="res://scripts/menuStart.gd" id="1_ncqf3"]
+[ext_resource type="AudioStream" uid="uid://ce1gvbip3gb5p" path="res://sounds/clickMenu.wav" id="3_tc6ix"]
 
 [node name="menuStart" type="Node2D"]
 script = ExtResource("1_ncqf3")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-top_level = true
-offset_left = -88.0
-offset_top = -60.0
-offset_right = 1179.0
-offset_bottom = 741.0
-color = Color(1, 1, 1, 0.615686)
+[node name="buttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-top_level = true
-custom_minimum_size = Vector2(480, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 274.5
-offset_top = 281.0
-offset_right = -205.5
-offset_bottom = -117.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 0.000403179
+[node name="How Play" type="Button" parent="buttons"]
+process_mode = 3
+offset_left = 277.0
+offset_top = 393.0
+offset_right = 757.0
+offset_bottom = 440.0
+theme_override_fonts/font = ExtResource("1_ccu5i")
+theme_override_font_sizes/font_size = 35
+text = "Settings / How to play"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
-layout_mode = 2
+[node name="Start" type="Button" parent="buttons"]
+process_mode = 3
+offset_left = 272.0
+offset_top = 325.0
+offset_right = 752.0
+offset_bottom = 372.0
+theme_override_fonts/font = ExtResource("1_ccu5i")
+theme_override_font_sizes/font_size = 35
+text = "Start"
+icon_alignment = 1
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="buttons/Start"]
+stream = ExtResource("3_tc6ix")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 280.0
+offset_top = 245.0
+offset_right = 760.0
+offset_bottom = 294.0
 theme_override_fonts/font = ExtResource("1_ccu5i")
 theme_override_font_sizes/font_size = 45
 text = "Welcome"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Start" type="Button" parent="PanelContainer/VBoxContainer"]
-process_mode = 3
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_ccu5i")
-theme_override_font_sizes/font_size = 35
-text = "Start"
-icon_alignment = 1
+[node name="sprites" type="Node" parent="."]
 
-[node name="How Play" type="Button" parent="PanelContainer/VBoxContainer"]
-process_mode = 3
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_ccu5i")
-theme_override_font_sizes/font_size = 35
-text = "Settings / How to play"
-
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/How Play" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/How Play" to="." method="_on_how_play_pressed"]
+[connection signal="pressed" from="buttons/How Play" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="buttons/How Play" to="." method="_on_how_play_pressed"]
+[connection signal="pressed" from="buttons/Start" to="." method="_on_start_pressed"]
