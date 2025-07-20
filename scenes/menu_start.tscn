@@ -17,6 +17,7 @@ anchors_preset = 0
 [node name="How Play" type="Button" parent="buttons"]
 process_mode = 3
 z_index = 15
+layout_mode = 0
 offset_left = 277.0
 offset_top = 393.0
 offset_right = 757.0
@@ -30,6 +31,7 @@ flat = true
 [node name="Start" type="Button" parent="buttons"]
 process_mode = 3
 z_index = 15
+layout_mode = 0
 offset_left = 422.0
 offset_top = 330.0
 offset_right = 622.0
@@ -43,9 +45,11 @@ icon_alignment = 1
 
 [node name="clickMenu" type="AudioStreamPlayer" parent="buttons"]
 stream = ExtResource("3_tc6ix")
+volume_db = -10.667
 
 [node name="bottoms" type="AudioStreamPlayer" parent="buttons"]
 stream = ExtResource("4_4jmj5")
+volume_db = -21.333
 
 [node name="Label" type="Label" parent="."]
 z_index = 15

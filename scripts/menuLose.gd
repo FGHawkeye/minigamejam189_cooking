@@ -19,14 +19,16 @@ func _ready() -> void: #sonidos
 func mouse_entered(): #sonido al pasar mouse
 	bottoms.play()
 	
-func bottom_click(): #sonido click
+func bottom_click():
 	click_menu.play()
 
 func _on_restart_pressed() -> void:
+	await get_tree().create_timer(0.2).timeout
 	get_tree().paused = false
 	get_tree().reload_current_scene()
 
 func _on_back_pressed() -> void:
+	await get_tree().create_timer(0.2).timeout
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/menu_start.tscn")
 	

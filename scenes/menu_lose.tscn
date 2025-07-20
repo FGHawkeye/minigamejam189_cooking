@@ -113,10 +113,12 @@ texture = ExtResource("4_p7brk")
 
 [node name="clickMenu" type="AudioStreamPlayer" parent="sounds"]
 stream = ExtResource("5_ulume")
+volume_db = -10.667
 
 [node name="bottoms" type="AudioStreamPlayer" parent="sounds"]
 stream = ExtResource("6_214tn")
+volume_db = -21.333
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/back" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/back" to="." method="_on_exit_pressed"]
