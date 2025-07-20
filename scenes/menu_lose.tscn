@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://b8s5q0yi71dcr" path="res://sounds/bottoms.wav" id="6_214tn"]
 
 [node name="menuLose" type="Control"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -84,26 +85,27 @@ theme_override_font_sizes/font_size = 35
 text = "back to menu"
 flat = true
 
-[node name="sprites" type="Node" parent="PanelContainer/VBoxContainer"]
-
-[node name="Menu" type="Sprite2D" parent="PanelContainer/VBoxContainer/sprites"]
+[node name="Menu" type="Sprite2D" parent="PanelContainer/VBoxContainer"]
 process_mode = 3
 z_index = 10
-position = Vector2(519, 381.5)
+position = Vector2(244.039, 96.4016)
+rotation = -0.000403179
 scale = Vector2(1, 1.21277)
 texture = ExtResource("3_mg06i")
 
-[node name="salchi" type="Sprite2D" parent="PanelContainer/VBoxContainer/sprites"]
+[node name="salchi" type="Sprite2D" parent="PanelContainer/VBoxContainer"]
 process_mode = 3
 z_index = 10
-position = Vector2(520, 412.25)
+position = Vector2(245.051, 127.151)
+rotation = -0.000403179
 scale = Vector2(1, 0.931373)
 texture = ExtResource("4_p7brk")
 
-[node name="salchi2" type="Sprite2D" parent="PanelContainer/VBoxContainer/sprites"]
+[node name="salchi2" type="Sprite2D" parent="PanelContainer/VBoxContainer"]
 process_mode = 3
 z_index = 10
-position = Vector2(525, 467.25)
+position = Vector2(250.073, 182.149)
+rotation = -0.000403179
 scale = Vector2(1, 0.951)
 texture = ExtResource("4_p7brk")
 
