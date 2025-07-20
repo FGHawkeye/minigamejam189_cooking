@@ -61,7 +61,7 @@ text = "Welcome"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="sprites" type="Node" parent="."]
+[node name="sprites" type="CanvasModulate" parent="."]
 
 [node name="Salchi" type="Sprite2D" parent="sprites"]
 z_index = 5

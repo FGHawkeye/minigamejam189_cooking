@@ -232,6 +232,7 @@ libraries = {
 autoplay = "jefereloj"
 
 [node name="menuLose" parent="." instance=ExtResource("1_choun")]
+visible = false
 custom_minimum_size = Vector2(480, 302)
 offset_top = 6.0
 offset_right = 959.0
