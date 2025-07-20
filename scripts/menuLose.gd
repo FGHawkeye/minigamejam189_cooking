@@ -1,9 +1,5 @@
 extends Control
 
-func mostrarScoreFinal():
-	var scoreManager = get_node("/root/main/scoreManager")
-	$PanelContainer/VBoxContainer/score.text = "Score: " + str(scoreManager.scoreFinal)
-
 @onready var restart: Button = $PanelContainer/VBoxContainer/restart
 @onready var back: Button = $PanelContainer/VBoxContainer/back
 @onready var click_menu: AudioStreamPlayer = $sounds/clickMenu
@@ -24,11 +20,15 @@ func bottom_click():
 
 func _on_restart_pressed() -> void:
 	await get_tree().create_timer(0.2).timeout
+	get_node("/root/main/scoreManager").iniciarNuevaRonda()
 	get_tree().paused = false
-	get_tree().reload_current_scene()
+	self.visible = false
 
 func _on_back_pressed() -> void:
 	await get_tree().create_timer(0.2).timeout
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/menu_start.tscn")
-	
+
+func mostrarScoreFinal():
+	var scoreManager = get_node("/root/main/scoreManager")
+	$PanelContainer/VBoxContainer/score.text = "Score: " + str(scoreManager.scoreFinal)

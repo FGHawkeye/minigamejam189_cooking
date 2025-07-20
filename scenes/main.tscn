@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cv1flc1otdj8f"]
+[gd_scene load_steps=20 format=3 uid="uid://cv1flc1otdj8f"]
 
 [ext_resource type="Script" uid="uid://bvgwkwxr1wd4s" path="res://scripts/scoreManager.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://df00nymfkli2k" path="res://scenes/menu_lose.tscn" id="1_choun"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://bv1mju51v66u2" path="res://scripts/timer.gd" id="2_tipki"]
 [ext_resource type="Texture2D" uid="uid://cthrewt4h2gr8" path="res://sprites/fondo.png" id="3_sugp2"]
 [ext_resource type="FontFile" uid="uid://dnmt4kb3ljgo3" path="res://fonts/Sawer.otf" id="4_85g3d"]
-[ext_resource type="AudioStream" uid="uid://dy7o48gr0xwvp" path="res://sounds/cutting.mp3" id="4_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://cacxrnfms4xi8" path="res://sprites/receta.png" id="4_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://wqtqkomss67b" path="res://sprites/reloj.png" id="5_tefeu"]
 [ext_resource type="Texture2D" uid="uid://6cnerycp1wj" path="res://sprites/barra.png" id="6_o6xl0"]
@@ -197,9 +196,6 @@ label_settings = SubResource("LabelSettings_jyhfs")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="cut" type="AudioStreamPlayer" parent="scoreManager"]
-stream = ExtResource("4_eb6dy")
-
 [node name="Sprites" type="Node" parent="."]
 
 [node name="Background" type="Sprite2D" parent="Sprites"]
@@ -258,6 +254,10 @@ scale = Vector2(0.725747, 1)
 icon = ExtResource("14_a8y0u")
 flat = true
 script = ExtResource("15_jkv2x")
+sprites = NodePath("../Sprites")
+timer = NodePath("../timerManager")
+generador = NodePath("../generadorIngredientes")
+scoreManager = NodePath("../scoreManager")
 
 [node name="Label" type="Label" parent="Button"]
 layout_mode = 0
@@ -267,3 +267,5 @@ offset_right = 257.01
 offset_bottom = 56.0
 text = "Start"
 label_settings = SubResource("LabelSettings_jkv2x")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

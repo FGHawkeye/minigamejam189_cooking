@@ -1,16 +1,19 @@
 extends Button
 
-@onready var start: Button = $Button
-@onready var sprites: Node = $Sprites
-@onready var timer: Timer = $timerManager/Timer
-@onready var generador: Node = $generadorIngredientes
-@onready var scoreManager: Node = $scoreManager
+@export var sprites: NodePath
+@export var timer: NodePath
+@export var generador: NodePath
+@export var scoreManager: NodePath
 
-func _on_start_pressed() -> void:
-	await get_tree().create_timer(1).timeout
-	for child in sprites.get_children():
+func _on_pressed() -> void:
+	await get_tree().create_timer(0.2).timeout
+	var spritesNode = get_node(sprites)
+	for child in spritesNode.get_children():
 		child.visible = true
-	generador.spawnFood()
-	scoreManager.obtenerScoreParaGanar()
-	timer.start()
-	
+		
+	get_node(generador).spawnFood()
+	get_node(scoreManager).obtenerScoreParaGanar()
+	var timerNode = get_node(timer)
+	timerNode.visible = true
+	timerNode.get_child(0).start()
+	self.visible = false

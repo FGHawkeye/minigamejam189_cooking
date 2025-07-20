@@ -1,6 +1,8 @@
 extends Area2D
-var numIngr = 0
 
+@onready var cut: AudioStreamPlayer = $cut
+
+var numIngr = 0
 
 func _ready():
 	numIngr = int(randf_range(1,9))
@@ -10,8 +12,10 @@ func _input_event(viewport, event, shape_idx):
 	if event.is_action_pressed("click"):
 		print("click")
 		print("Valor del ingrediente:", numIngr)
+		cut.play()
 		get_node("/root/main/scoreManager").sumarPuntaje(int(numIngr))
 		_mouse_exit()
+		await get_tree().create_timer(0.1).timeout
 		get_parent().queue_free()
 
 func setFrameFood(dictionary: Dictionary):
