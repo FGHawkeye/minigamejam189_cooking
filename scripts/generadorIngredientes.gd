@@ -25,7 +25,7 @@ func getAllNodes(node):
 
 func resetAllFood():
 	changeDictionary()
-	#removeFood()
+	removeFood()
 	spawnFood()
 	
 func changeDictionary():
@@ -35,4 +35,7 @@ func changeDictionary():
 		foodSpriteDictionary[index] = randomNumber
 		listOfFrameNumbers.erase(randomNumber)
 
-	
+func removeFood():
+	for child in get_children():
+		if child is Sprite2D:
+			child.queue_free()

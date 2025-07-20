@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0gw8o5jx887"
-path="res://.godot/imported/dfgg.png-44ce8dbbc467a44351afbcc19ff9a4ef.ctex"
+uid="uid://v8o80wctm4x1"
+path="res://.godot/imported/salchicha.png-2e31a9232f29c91a810086968af07776.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/dfgg.png"
-dest_files=["res://.godot/imported/dfgg.png-44ce8dbbc467a44351afbcc19ff9a4ef.ctex"]
+source_file="res://sprites/salchicha.png"
+dest_files=["res://.godot/imported/salchicha.png-2e31a9232f29c91a810086968af07776.ctex"]
 
 [params]
 

@@ -35,4 +35,4 @@ func sumarPuntaje(valor):
 
 func iniciarNuevaRonda():
 	timerManagerNode.get_child(0).start()
-	
+	generadorIngredientesNode.resetAllFood()
