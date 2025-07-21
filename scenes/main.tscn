@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bvgwkwxr1wd4s" path="res://scripts/scoreManager.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://df00nymfkli2k" path="res://scenes/menu_lose.tscn" id="1_choun"]
+[ext_resource type="Script" uid="uid://bv5tp7df60rei" path="res://scripts/init.gd" id="1_muem4"]
 [ext_resource type="Script" uid="uid://cc86yvq6xleb5" path="res://scripts/generadorIngredientes.gd" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://bv1mju51v66u2" path="res://scripts/timer.gd" id="2_tipki"]
 [ext_resource type="Texture2D" uid="uid://cthrewt4h2gr8" path="res://sprites/fondo.png" id="3_sugp2"]
@@ -12,8 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://hgdeoolymofw" path="res://sprites/rellenoBarra.png" id="7_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://bbx2mxt3xkf1a" path="res://sprites/jefereloj.png" id="10_ya4ey"]
 [ext_resource type="AudioStream" uid="uid://d0rmena3t8m1j" path="res://sounds/sumAndServe.mp3" id="13_trceg"]
-[ext_resource type="Texture2D" uid="uid://v8o80wctm4x1" path="res://sprites/salchicha.png" id="14_a8y0u"]
-[ext_resource type="Script" uid="uid://biwbtsgacmdx5" path="res://scripts/mainStartButton.gd" id="15_jkv2x"]
+[ext_resource type="Texture2D" uid="uid://d2t8dqwbia58e" path="res://sprites/ready.png" id="16_dp3eg"]
+[ext_resource type="Texture2D" uid="uid://eaowswq6cs5h" path="res://sprites/go.png" id="17_0ld40"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jyhfs"]
 font = ExtResource("4_85g3d")
@@ -81,11 +82,12 @@ _data = {
 &"jefereloj": SubResource("Animation_eb6dy")
 }
 
-[sub_resource type="LabelSettings" id="LabelSettings_jkv2x"]
-font = ExtResource("4_85g3d")
-font_size = 48
-
 [node name="main" type="Node2D"]
+script = ExtResource("1_muem4")
+sprites = NodePath("Sprites")
+timer = NodePath("timerManager")
+generador = NodePath("generadorIngredientes")
+scoreManager = NodePath("scoreManager")
 
 [node name="timerManager" type="Node2D" parent="."]
 visible = false
@@ -240,32 +242,16 @@ offset_top = 6.0
 offset_right = 959.0
 offset_bottom = 590.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="music" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("13_trceg")
 parameters/looping = true
 
-[node name="Button" type="Button" parent="."]
-offset_left = 209.0
-offset_top = 353.0
-offset_right = 580.0
-offset_bottom = 412.0
-scale = Vector2(0.725747, 1)
-icon = ExtResource("14_a8y0u")
-flat = true
-script = ExtResource("15_jkv2x")
-sprites = NodePath("../Sprites")
-timer = NodePath("../timerManager")
-generador = NodePath("../generadorIngredientes")
-scoreManager = NodePath("../scoreManager")
+[node name="Ready" type="Sprite2D" parent="."]
+position = Vector2(349, 104)
+texture = ExtResource("16_dp3eg")
 
-[node name="Label" type="Label" parent="Button"]
-layout_mode = 0
-offset_left = 124.01
-offset_top = 1.0
-offset_right = 257.01
-offset_bottom = 56.0
-text = "Start"
-label_settings = SubResource("LabelSettings_jkv2x")
-
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="Go" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(344, 104)
+texture = ExtResource("17_0ld40")
