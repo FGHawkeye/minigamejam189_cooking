@@ -82,5 +82,6 @@ z_index = -1
 position = Vector2(478, 297)
 texture = ExtResource("7_egsp4")
 
+[connection signal="pressed" from="buttons/How Play" to="." method="_on_how_play_pressed"]
 [connection signal="pressed" from="buttons/How Play" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="buttons/Start" to="." method="_on_start_pressed"]

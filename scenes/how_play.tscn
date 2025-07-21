@@ -1,0 +1,133 @@
+[gd_scene load_steps=10 format=3 uid="uid://benun7r5lpb3o"]
+
+[ext_resource type="Script" uid="uid://bqmyr75uwpfh3" path="res://scripts/howPlay.gd" id="1_2jw63"]
+[ext_resource type="Texture2D" uid="uid://cacxrnfms4xi8" path="res://sprites/receta.png" id="1_ptbb3"]
+[ext_resource type="Texture2D" uid="uid://wqtqkomss67b" path="res://sprites/reloj.png" id="2_h55sa"]
+[ext_resource type="FontFile" uid="uid://dnmt4kb3ljgo3" path="res://fonts/Sawer.otf" id="4_ww600"]
+[ext_resource type="Texture2D" uid="uid://ddrj07tilkthx" path="res://sprites/ingredientes.png" id="5_edeih"]
+[ext_resource type="AudioStream" uid="uid://b8s5q0yi71dcr" path="res://sounds/bottoms.wav" id="5_nkq4r"]
+[ext_resource type="AudioStream" uid="uid://ce1gvbip3gb5p" path="res://sounds/clickMenu.wav" id="6_edeih"]
+[ext_resource type="Texture2D" uid="uid://cthrewt4h2gr8" path="res://sprites/fondo.png" id="8_yttct"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nkq4r"]
+
+[node name="howPlay" type="Node2D"]
+position = Vector2(-26, 2)
+script = ExtResource("1_2jw63")
+
+[node name="Label" type="Label" parent="."]
+process_mode = 3
+z_index = 12
+offset_left = 151.0
+offset_top = 317.0
+offset_right = 1301.0
+offset_bottom = 366.0
+scale = Vector2(0.611386, 0.858254)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ww600")
+theme_override_font_sizes/font_size = 45
+text = "You've to press an ingredient to sum the score inside."
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+process_mode = 3
+z_index = 12
+offset_left = 136.0
+offset_top = 134.0
+offset_right = 616.0
+offset_bottom = 235.0
+scale = Vector2(0.589103, 0.85661)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ww600")
+theme_override_font_sizes/font_size = 45
+text = "Here is the score you 
+need to win the round."
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+process_mode = 3
+z_index = 12
+offset_left = 526.0
+offset_top = 131.0
+offset_right = 1212.0
+offset_bottom = 232.0
+scale = Vector2(0.517776, 0.901998)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ww600")
+theme_override_font_sizes/font_size = 45
+text = "Up the clock, 
+it's the time bar. "
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+process_mode = 3
+z_index = 15
+offset_left = 85.0
+offset_top = 402.0
+offset_right = 1235.0
+offset_bottom = 503.0
+scale = Vector2(0.695422, 1.17243)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ww600")
+theme_override_font_sizes/font_size = 45
+text = "Win a round before the time timeout.
+How many rounds can you win?"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+top_level = true
+z_index = 6
+offset_left = -87.0
+offset_top = -91.0
+offset_right = 1180.0
+offset_bottom = 710.0
+color = Color(1, 1, 1, 0.529412)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="recipe" type="Sprite2D" parent="Node2D"]
+z_index = 15
+position = Vector2(277, 67)
+scale = Vector2(0.470187, 0.50641)
+texture = ExtResource("1_ptbb3")
+
+[node name="clock" type="Sprite2D" parent="Node2D"]
+z_index = 15
+position = Vector2(698, 72)
+scale = Vector2(0.591348, 0.586539)
+texture = ExtResource("2_h55sa")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+z_index = 15
+position = Vector2(506, 277)
+scale = Vector2(0.936042, 1)
+texture = ExtResource("5_edeih")
+
+[node name="backMenu" type="Button" parent="."]
+process_mode = 3
+z_index = 20
+offset_left = 625.0
+offset_top = 536.0
+offset_right = 1105.0
+offset_bottom = 583.0
+scale = Vector2(0.665266, 1.08773)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ww600")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nkq4r")
+text = "back to menu"
+flat = true
+
+[node name="bottoms" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_nkq4r")
+volume_db = -21.333
+
+[node name="clickMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_edeih")
+volume_db = -10.667
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(503, 296)
+texture = ExtResource("8_yttct")
+
+[connection signal="pressed" from="backMenu" to="." method="_on_back_menu_pressed"]

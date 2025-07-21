@@ -4,6 +4,8 @@ extends Node2D
 @onready var how_play: Button = $"buttons/How Play"
 @onready var click_menu: AudioStreamPlayer = $buttons/clickMenu
 @onready var bottoms: AudioStreamPlayer = $buttons/bottoms
+@onready var howPlayNode: Control = $howPlay
+
 
 func _ready() -> void: #sonidos
 	start.mouse_entered.connect(mouse_entered)
@@ -21,5 +23,8 @@ func _on_start_pressed() -> void:
 	await get_tree().create_timer(0.2).timeout
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
+
+
 func _on_how_play_pressed() -> void:
-	pass # Replace with function body.
+	await get_tree().create_timer(0.2).timeout
+	get_tree().change_scene_to_file("res://scenes/how_play.tscn")

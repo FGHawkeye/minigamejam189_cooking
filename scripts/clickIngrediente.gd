@@ -10,13 +10,13 @@ func _ready():
 
 func _input_event(viewport, event, shape_idx):
 	if event.is_action_pressed("click"):
+		cut.play()
+		await get_tree().create_timer(0.1).timeout
 		print("click")
 		print("Valor del ingrediente:", numIngr)
 		get_child(3).emitting = true
-		cut.play()
 		get_node("/root/main/scoreManager").sumarPuntaje(int(numIngr))
 		_mouse_exit()
-		await get_tree().create_timer(0.1).timeout
 		get_parent().queue_free()
 
 func setFrameFood(dictionary: Dictionary):
