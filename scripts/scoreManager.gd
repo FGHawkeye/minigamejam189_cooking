@@ -28,7 +28,6 @@ func sumarPuntaje(valor):
 		print(scoreFinal)
 		get_tree().paused = true
 		menuLoseNode.visible = true
-		
 		menuLoseNode.mostrarScoreFinal()
 
 func iniciarNuevaRonda():
@@ -36,3 +35,10 @@ func iniciarNuevaRonda():
 	generadorIngredientesNode.resetAllFood()
 	obtenerScoreParaGanar()
 	scoreTotal = 0
+
+func iniciarNuevaRondaYRound():
+	timerManagerNode.get_child(0).start()
+	generadorIngredientesNode.resetAllFood()
+	obtenerScoreParaGanar()
+	scoreTotal = 0
+	scoreFinal = 0

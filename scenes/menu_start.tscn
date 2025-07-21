@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ccf5paujcuo1m"]
+[gd_scene load_steps=11 format=3 uid="uid://ccf5paujcuo1m"]
 
 [ext_resource type="FontFile" uid="uid://dnmt4kb3ljgo3" path="res://fonts/Sawer.otf" id="1_ccu5i"]
 [ext_resource type="Script" uid="uid://c6i8qux5cnao" path="res://scripts/menuStart.gd" id="1_ncqf3"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://v8o80wctm4x1" path="res://sprites/salchicha.png" id="5_okbob"]
 [ext_resource type="Texture2D" uid="uid://8nso3wcpiawi" path="res://sprites/menu.png" id="6_egsp4"]
 [ext_resource type="Texture2D" uid="uid://ktsggshjjss4" path="res://sprites/portadaB.png" id="7_egsp4"]
+[ext_resource type="AudioStream" uid="uid://dochfa4cfo6rp" path="res://sounds/titletheme.mp3" id="8_cp8n1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_okbob"]
 
@@ -81,6 +82,12 @@ texture = ExtResource("6_egsp4")
 z_index = -1
 position = Vector2(478, 297)
 texture = ExtResource("7_egsp4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_cp8n1")
+volume_db = 3.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="buttons/How Play" to="." method="_on_how_play_pressed"]
 [connection signal="pressed" from="buttons/How Play" to="." method="_on_settings_pressed"]

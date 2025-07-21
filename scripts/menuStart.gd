@@ -4,8 +4,6 @@ extends Node2D
 @onready var how_play: Button = $"buttons/How Play"
 @onready var click_menu: AudioStreamPlayer = $buttons/clickMenu
 @onready var bottoms: AudioStreamPlayer = $buttons/bottoms
-@onready var howPlayNode: Control = $howPlay
-
 
 func _ready() -> void: #sonidos
 	start.mouse_entered.connect(mouse_entered)

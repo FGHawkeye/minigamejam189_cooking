@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://benun7r5lpb3o"]
+[gd_scene load_steps=10 format=3 uid="uid://bsauuqsjj1n5l"]
 
-[ext_resource type="Script" uid="uid://bqmyr75uwpfh3" path="res://scripts/howPlay.gd" id="1_2jw63"]
+[ext_resource type="Script" path="res://scripts/howPlay.gd" id="1_2jw63"]
 [ext_resource type="Texture2D" uid="uid://cacxrnfms4xi8" path="res://sprites/receta.png" id="1_ptbb3"]
 [ext_resource type="Texture2D" uid="uid://wqtqkomss67b" path="res://sprites/reloj.png" id="2_h55sa"]
 [ext_resource type="FontFile" uid="uid://dnmt4kb3ljgo3" path="res://fonts/Sawer.otf" id="4_ww600"]
@@ -27,6 +27,20 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_ww600")
 theme_override_font_sizes/font_size = 45
 text = "You've to press an ingredient to sum the score inside."
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="."]
+process_mode = 3
+z_index = 12
+offset_left = 155.0
+offset_top = 359.0
+offset_right = 1305.0
+offset_bottom = 408.0
+scale = Vector2(0.611386, 0.858254)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ww600")
+theme_override_font_sizes/font_size = 45
+text = "Sum the exact score to win a round."
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
@@ -62,11 +76,11 @@ horizontal_alignment = 1
 [node name="Label4" type="Label" parent="."]
 process_mode = 3
 z_index = 15
-offset_left = 85.0
-offset_top = 402.0
-offset_right = 1235.0
-offset_bottom = 503.0
-scale = Vector2(0.695422, 1.17243)
+offset_left = -56.0
+offset_top = 425.0
+offset_right = 1094.0
+offset_bottom = 526.0
+scale = Vector2(0.76225, 1.46306)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_ww600")
 theme_override_font_sizes/font_size = 45

@@ -20,7 +20,7 @@ func bottom_click():
 
 func _on_restart_pressed() -> void:
 	await get_tree().create_timer(0.2).timeout
-	get_node("/root/main/scoreManager").iniciarNuevaRonda()
+	get_node("/root/main/scoreManager").iniciarNuevaRondaYRound()
 	get_tree().paused = false
 	self.visible = false
 
@@ -31,4 +31,4 @@ func _on_back_pressed() -> void:
 
 func mostrarScoreFinal():
 	var scoreManager = get_node("/root/main/scoreManager")
-	$PanelContainer/VBoxContainer/score.text = "Score: " + str(scoreManager.scoreFinal)
+	$PanelContainer/VBoxContainer/score.text = "Rounds: " + str(scoreManager.scoreFinal)
